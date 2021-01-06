@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qax.mapper.PersionMapper">
+    <resultMap id="BaseResultMap" type="com.qax.model.Persion">
+        <!--@mbg.generated-->
+        <!--@Table persion-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="role_acc" jdbcType="VARCHAR" property="roleAcc"/>
+        <result column="role_code" jdbcType="VARCHAR" property="roleCode"/>
+        <result column="role_name" jdbcType="VARCHAR" property="roleName"/>
+        <result column="date_created" jdbcType="TIMESTAMP" property="dateCreated"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, role_acc, role_code, role_name, date_created
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+
+
+        <include refid="Base_Column_List"/>
+
+
+        from persion
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        <!--@mbg.generated-->
+        delete
+        from persion
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.qax.model.Persion" useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into persion (role_acc, role_code, role_name,
+                             date_created)
+        values (#{roleAcc,jdbcType=VARCHAR}, #{roleCode,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR},
+                #{dateCreated,jdbcType=TIMESTAMP})
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.qax.model.Persion"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into persion
+
+
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="roleAcc != null">
+                role_acc,
+            </if>
+            <if test="roleCode != null">
+                role_code,
+            </if>
+            <if test="roleName != null">
+                role_name,
+            </if>
+            <if test="dateCreated != null">
+                date_created,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="roleAcc != null">
+                #{roleAcc,jdbcType=VARCHAR},
+            </if>
+            <if test="roleCode != null">
+                #{roleCode,jdbcType=VARCHAR},
+            </if>
+            <if test="roleName != null">
+                #{roleName,jdbcType=VARCHAR},
+            </if>
+            <if test="dateCreated != null">
+                #{dateCreated,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.qax.model.Persion">
+        <!--@mbg.generated-->
+        update persion
+
+
+        <set>
+            <if test="roleAcc != null">
+                role_acc = #{roleAcc,jdbcType=VARCHAR},
+            </if>
+            <if test="roleCode != null">
+                role_code = #{roleCode,jdbcType=VARCHAR},
+            </if>
+            <if test="roleName != null">
+                role_name = #{roleName,jdbcType=VARCHAR},
+            </if>
+            <if test="dateCreated != null">
+                date_created = #{dateCreated,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+
+
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.qax.model.Persion">
+        <!--@mbg.generated-->
+        update persion
+        set role_acc     = #{roleAcc,jdbcType=VARCHAR},
+            role_code    = #{roleCode,jdbcType=VARCHAR},
+            role_name    = #{roleName,jdbcType=VARCHAR},
+            date_created = #{dateCreated,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="findByAll" resultMap="BaseResultMap">
+        select
+
+
+        <include refid="Base_Column_List"/>
+
+
+        from persion
+    </select>
+</mapper>
