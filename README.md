@@ -126,6 +126,8 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
  使用@Bean的方式交给Spring来管理，
  如果直接new FirstInterceptor()则会发现拦截器中无法使用Spring容器中的Bean
  
- 
+# 拦截器和过滤器执行流程图
+
+![](/src/main/resources/static/拦截器和过滤器执行流程.jfif)
 
 
