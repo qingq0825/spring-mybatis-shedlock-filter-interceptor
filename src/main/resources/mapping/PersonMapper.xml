@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qax.mapper.PersionMapper">
-    <resultMap id="BaseResultMap" type="com.qax.model.Persion">
+<mapper namespace="com.qax.mapper.PersonMapper">
+    <resultMap id="BaseResultMap" type="com.qax.model.Person">
         <!--@mbg.generated-->
         <!--@Table persion-->
         <id column="id" jdbcType="INTEGER" property="id"/>
@@ -31,14 +31,14 @@
         from persion
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.qax.model.Persion" useGeneratedKeys="true">
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.qax.model.Person" useGeneratedKeys="true">
         <!--@mbg.generated-->
         insert into persion (role_acc, role_code, role_name,
                              date_created)
         values (#{roleAcc,jdbcType=VARCHAR}, #{roleCode,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR},
                 #{dateCreated,jdbcType=TIMESTAMP})
     </insert>
-    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.qax.model.Persion"
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.qax.model.Person"
             useGeneratedKeys="true">
         <!--@mbg.generated-->
         insert into persion
@@ -73,7 +73,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.qax.model.Persion">
+    <update id="updateByPrimaryKeySelective" parameterType="com.qax.model.Person">
         <!--@mbg.generated-->
         update persion
 
@@ -96,7 +96,7 @@
 
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.qax.model.Persion">
+    <update id="updateByPrimaryKey" parameterType="com.qax.model.Person">
         <!--@mbg.generated-->
         update persion
         set role_acc     = #{roleAcc,jdbcType=VARCHAR},

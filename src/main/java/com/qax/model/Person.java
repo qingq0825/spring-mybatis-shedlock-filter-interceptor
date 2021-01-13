@@ -3,18 +3,21 @@ package com.qax.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @ClassName Persion
  * @author Guoqing.Qin
+ * @ClassName Person
  * @create 2021-01-05 19:00
- * @Description:
- *
+ * @Description: 人
  */
 @Data
 @AllArgsConstructor
-public class Persion {
+public class Person implements Serializable {
+
+    private static final long serialVersionUID = 5954809042643762884L;
+
     /**
      * 主键ID
      */

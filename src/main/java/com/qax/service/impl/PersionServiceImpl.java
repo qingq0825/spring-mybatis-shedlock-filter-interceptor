@@ -2,8 +2,8 @@ package com.qax.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.qax.mapper.PersionMapper;
-import com.qax.model.Persion;
+import com.qax.mapper.PersonMapper;
+import com.qax.model.Person;
 import com.qax.service.PersionService;
 import org.springframework.stereotype.Service;
 
@@ -20,36 +20,36 @@ import javax.annotation.Resource;
 public class PersionServiceImpl implements PersionService {
 
     @Resource
-    private PersionMapper persionMapper;
+    private PersonMapper personMapper;
 
     @Override
     public int deleteByPrimaryKey(Integer id) {
-        return persionMapper.deleteByPrimaryKey(id);
+        return personMapper.deleteByPrimaryKey(id);
     }
 
     @Override
-    public int insert(Persion record) {
-        return persionMapper.insert(record);
+    public int insert(Person record) {
+        return personMapper.insert(record);
     }
 
     @Override
-    public int insertSelective(Persion record) {
-        return persionMapper.insertSelective(record);
+    public int insertSelective(Person record) {
+        return personMapper.insertSelective(record);
     }
 
     @Override
-    public Persion selectByPrimaryKey(Integer id) {
-        return persionMapper.selectByPrimaryKey(id);
+    public Person selectByPrimaryKey(Integer id) {
+        return personMapper.selectByPrimaryKey(id);
     }
 
     @Override
-    public int updateByPrimaryKeySelective(Persion record) {
-        return persionMapper.updateByPrimaryKeySelective(record);
+    public int updateByPrimaryKeySelective(Person record) {
+        return personMapper.updateByPrimaryKeySelective(record);
     }
 
     @Override
-    public int updateByPrimaryKey(Persion record) {
-        return persionMapper.updateByPrimaryKey(record);
+    public int updateByPrimaryKey(Person record) {
+        return personMapper.updateByPrimaryKey(record);
     }
 
     /**
@@ -58,9 +58,9 @@ public class PersionServiceImpl implements PersionService {
      *
      * @return
      */
-    public PageInfo<Persion> findByAllwithPage(int page, int pageSize) {
+    public PageInfo<Person> findByAllwithPage(int page, int pageSize) {
         PageHelper.startPage(page, pageSize);
-        return new PageInfo<>(persionMapper.findByAll());
+        return new PageInfo<>(personMapper.findByAll());
     }
 }
 

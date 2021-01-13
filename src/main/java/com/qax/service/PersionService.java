@@ -1,7 +1,7 @@
 package com.qax.service;
 
 import com.github.pagehelper.PageInfo;
-import com.qax.model.Persion;
+import com.qax.model.Person;
 
 /**
  * @author Guoqing.Qin
@@ -15,17 +15,17 @@ public interface PersionService {
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Persion record);
+    int insert(Person record);
 
-    int insertSelective(Persion record);
+    int insertSelective(Person record);
 
-    Persion selectByPrimaryKey(Integer id);
+    Person selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(Persion record);
+    int updateByPrimaryKeySelective(Person record);
 
-    int updateByPrimaryKey(Persion record);
+    int updateByPrimaryKey(Person record);
 
-    PageInfo<Persion> findByAllwithPage(int page, int pageSize);
+    PageInfo<Person> findByAllwithPage(int page, int pageSize);
 }
 
 

@@ -1,18 +1,18 @@
 package com.qax.mapper;
 
-import com.qax.model.Persion;
+import com.qax.model.Person;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 /**
  * @author Guoqing.Qin
- * @ClassName PersionMapper
+ * @ClassName PersonMapper
  * @create 2021-01-05 19:00
  * @Description:
  */
 @Mapper
-public interface PersionMapper {
+public interface PersonMapper {
     /**
      * delete by primary key
      *
@@ -29,7 +29,7 @@ public interface PersionMapper {
      *
      * @return insert count
      */
-    int insert(Persion record);
+    int insert(Person record);
 
     /**
      * insert record to table selective
@@ -38,7 +38,7 @@ public interface PersionMapper {
      *
      * @return insert count
      */
-    int insertSelective(Persion record);
+    int insertSelective(Person record);
 
     /**
      * select by primary key
@@ -47,7 +47,7 @@ public interface PersionMapper {
      *
      * @return object by primary key
      */
-    Persion selectByPrimaryKey(Integer id);
+    Person selectByPrimaryKey(Integer id);
 
     /**
      * update record selective
@@ -56,7 +56,7 @@ public interface PersionMapper {
      *
      * @return update count
      */
-    int updateByPrimaryKeySelective(Persion record);
+    int updateByPrimaryKeySelective(Person record);
 
     /**
      * update record
@@ -65,11 +65,11 @@ public interface PersionMapper {
      *
      * @return update count
      */
-    int updateByPrimaryKey(Persion record);
+    int updateByPrimaryKey(Person record);
 
     /**
      * 查询所有
      * @return
      */
-   List<Persion> findByAll();
+   List<Person> findByAll();
 }
