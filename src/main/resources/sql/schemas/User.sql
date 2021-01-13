@@ -1,6 +1,6 @@
 -- auto Generated on 2021-01-06
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user`(
+DROP TABLE IF EXISTS `t_user`;
+CREATE TABLE `t_user`(
 	id INT (11) NOT NULL AUTO_INCREMENT COMMENT 'id',
 	username VARCHAR (50) NOT NULL DEFAULT '' COMMENT 'username',
 	num INT (11) NOT NULL DEFAULT -1 COMMENT 'num',

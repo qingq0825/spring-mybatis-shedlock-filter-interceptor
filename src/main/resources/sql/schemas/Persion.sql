@@ -1,6 +1,6 @@
 -- auto Generated on 2021-01-05
-DROP TABLE IF EXISTS persion;
-CREATE TABLE persion(
+DROP TABLE IF EXISTS t_person;
+CREATE TABLE t_person(
 	id INT (11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
 	role_acc VARCHAR (50) NOT NULL DEFAULT '' COMMENT '角色账户',
 	role_code VARCHAR (50) NOT NULL DEFAULT '' COMMENT '角色代码',
